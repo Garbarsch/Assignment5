@@ -1,27 +1,28 @@
- namespace GildedRose.Console{
- 
- public class Item
+ namespace GildedRose.Console
+{
+    public class Item
     {
-        public string Name { get; set; }
+            public string Name { get; set; }
 
-        public int SellIn { get; set; }
+            public int SellIn { get; set; }
 
-        public int Quality { get; set; }
-    
-    public virtual void Update(){
-        SellIn -= 1;
-        if (SellIn < 0 ){
-            Quality -= 2;
+            public int Quality { get; set; }
 
-        } else
-        {
-            Quality -= 1;
+        public virtual void Update(){
+            SellIn -= 1;
+            if (SellIn < 0 ){
+                Quality -= 2;
 
-        } 
-        if (Quality < 0){
-            Quality = 0;
+            }
+            
+            else{
+                Quality -= 1;
+
+            } 
+            
+            if (Quality < 0){
+                Quality = 0;
+            }
         }
-
-    }
- }
- }
+    }  
+}

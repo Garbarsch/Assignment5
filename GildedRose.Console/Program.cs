@@ -39,10 +39,8 @@ namespace GildedRose.Console
         {
             foreach (var item in Items)
             {
-                item.Update();
-                
+                item.Update();  
             }
-            
         }
         /*
             for (var i = 0; i < Items.Count; i++)
